@@ -1,0 +1,26 @@
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel"
+     data-sly-use.cmp="com.nsc.core.models.BootstrapModel">
+    <div class="carousel-indicators" data-sly-list="${cmp.multifield}">
+        <button type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="${itemList.index}" class="${itemList.first ? 'active' : ''}"
+                aria-current="${itemList.first ? 'true' : ''}" aria-label="${item.label}"></button>
+    </div>
+    <div class="carousel-inner" data-sly-list="${cmp.multifield}">
+        <div class="carousel-item ${itemList.first ? 'active' : ''}" data-bs-interval="10000">
+            <img src="${item.image}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>${item.label}</h5>
+                <p>${item.description}</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
